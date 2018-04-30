@@ -16,4 +16,5 @@ def main():
             print("Empate")
 
 
-main()
+if __name__ == '__main__':
+    main()
