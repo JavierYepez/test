@@ -64,7 +64,7 @@ class Partida():
                                       self.__tablero.marcas[0::4]):
                     return True, jugador
                 if self._isTresEnRaya(jugador,
-                                      self.__tablero.marcas[2::2]):
+                                      self.__tablero.marcas[2:7:2]):
                     return True, jugador
             else:
                 return False
