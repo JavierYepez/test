@@ -1,6 +1,7 @@
 
 stack = []
 
+
 while True:
     inp = input("i/o")
     if inp == "i":
