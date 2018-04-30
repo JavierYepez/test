@@ -81,9 +81,9 @@ class Partida():
                 self._turno = 2
             else:
                 self._turno = 1
+            return False
         else:
-            # TODO: añadir error
-            pass
+            return True
 
     def refresco(self):
         self.__tablero.imprimir()
