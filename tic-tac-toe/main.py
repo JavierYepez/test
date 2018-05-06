@@ -6,8 +6,12 @@ def main():
 
     while not partida.isFinPartida():
         partida.refresco()
-        jugada = int(input("Jugador "+str(partida.turno)+": "))
-        partida.marcarCasilla(jugada)
+        try:
+            jugada = int(input("Jugador "+str(partida.turno)+": "))
+        except ValueError:
+            continue
+        else:
+            partida.marcarCasilla(jugada)
     else:
         partida.refresco()
         if partida.isFinPartida():

@@ -12,11 +12,14 @@ class Tablero():
             marca = 2
         else:
             raise ValueError("Este jugador no existe", jugador)
-        if self._marcas[posicion] != 0:
+        try:
+            if self._marcas[posicion] != 0:
+                return True
+            else:
+                self._marcas[posicion] = marca
+                return False
+        except IndexError:
             return True
-        else:
-            self._marcas[posicion] = marca
-            return False
 
     def imprimir(self):
         print("-----------")
